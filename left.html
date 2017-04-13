@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>首页</title>
+    <!--样式文件引用-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet"><!--公共导航部分--->
+    <link href="css/index.css" rel="stylesheet" type="text/css"><!---my css--->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div class="page-sidebar nav-collapse collapse">
+      <ul class="page-sidebar-menu">
+          <li>
+              <a class="sideblk blk" id="index" href="javascript:void(0);" onclick="go('index.html')">
+                  <i class="home"><img src="images/icon-home.png"/></i>
+                  <span class="title">首页</span>
+                  <span class="selected"></span>
+              </a>
+          </li>
+
+          <li>
+            <a class="sideblk blk" href="javascript:void(0);">
+                <i class="record"><img src="images/cogs.png"/></i>
+                <span class="title">预约管理</span>
+                <span class="arrowicon"><img src="images/arrowdown.png"/></span>
+            </a>
+            <ul class="sub-menu">
+              <li id="dtjyyd">
+                <a href="javascript:void(0);" onclick="go('waitPhysicalReservation.html')">&nbsp;&nbsp;待体检预约单</a>
+                              <span class="listCount">(34)</span>
+              </li>
+              <li id="ytjyyd">
+                <a href="javascript:void(0);" onclick="go('physicalReservation.html')">&nbsp;&nbsp;已体检预约单</a>
+                              <span class="listCount">(34)</span>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+              <a class="sideblk blk" href="javascript:void(0);">
+                  <i class="userset"><img src="images/userset.png"/></i>
+                  <span class="title">签约管理</span>
+                  <span class="arrowicon"><img src="images/arrowdown.png"/></span>
+              </a>
+              <ul class="sub-menu">
+                  <li id="pplb">
+                      <a href="javascript:void(0);" onclick="go('brandList.html')">&nbsp;&nbsp;品牌列表</a>
+                  </li>
+                  <li id="sjlb">
+                      <a href="javascript:void(0);" onclick="go('businessList.html')">&nbsp;&nbsp;商家列表</a>
+                  </li>
+                  <li id="qylb">
+                      <a href="javascript:void(0);" onclick="go('enterpriseList.html')">&nbsp;&nbsp;企业列表</a>
+                  </li>
+                  <!-- <li id="qypp">
+                      <a href="javascript:void(0);" onclick="go('signedBrand.html')">&nbsp;&nbsp;签约品牌</a>
+                  </li>
+                  <li id="qysj">
+                      <a href="javascript:void(0);" onclick="go('signedBusiness.html')">&nbsp;&nbsp;签约商家</a>
+                  </li>
+                  <li id="qyqy">
+                      <a href="javascript:void(0);" onclick="go('signedEnterprise.html')">&nbsp;&nbsp;签约企业</a>
+                  </li> -->
+              </ul>
+          </li>
+
+          <li>
+              <a class="sideblk blk" href="javascript:void(0);">
+                  <i class="userset"><img src="images/userset.png"/></i>
+                  <span class="title">审核管理</span>
+                  <span class="arrowicon"><img src="images/arrowdown.png"/></span>
+              </a>
+              <ul class="sub-menu">
+                  <li id="dshyy">
+                      <a href="javascript:void(0);" onclick="go('pendingHospital.html')">&nbsp;&nbsp;待审核医院</a><span class="listCount">(34)</span>
+                  </li>
+                  <li id="yshyy">
+                      <a href="javascript:void(0);" onclick="go('auditedHospital.html')">&nbsp;&nbsp;已审核医院</a>
+                  </li>
+                  <li id="dshtc">
+                      <a href="javascript:void(0);" onclick="go('pendingProduct.html')">&nbsp;&nbsp;待审核套餐</a><span class="listCount">(34)</span>
+                  </li>
+                  <li id="yshtc">
+                      <a href="javascript:void(0);" onclick="go('auditedProduct.html')">&nbsp;&nbsp;已审核套餐</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li>
+              <a class="sideblk blk" href="javascript:void(0);">
+                  <i class="userset"><img src="images/userset.png"/></i>
+                  <span class="title">用户管理</span>
+                  <span class="arrowicon"><img src="images/arrowdown.png"/></span>
+              </a>
+              <ul class="sub-menu">
+
+ <li id="twyg">
+                      <a href="javascript:void(0);" onclick="go('twAccount.html')">&nbsp;&nbsp;天问后台人员</a>
+                  </li>
+
+                  <li id="sjzh">
+                      <a href="javascript:void(0);" onclick="go('hospitalAccount.html')">&nbsp;&nbsp;医院后台人员</a>
+                  </li>
+                  <li id="qyzh">
+                      <a href="javascript:void(0);" onclick="go('enterpriseAccount.html')">&nbsp;&nbsp;企业后台人员</a>
+                  </li>
+                  <li id="hyzh">
+                      <a href="javascript:void(0);" onclick="go('memberAccount.html')">&nbsp;&nbsp;企业员工信息</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li>
+              <a class="sideblk blk" href="javascript:void(0);">
+                  <i class="userset"><img src="images/userset.png"/></i>
+                  <span class="title">单项管理</span>
+                  <span class="arrowicon"><img src="images/arrowdown.png"/></span>
+              </a>
+              <ul class="sub-menu">
+                  <li id="tjdxdr">
+                      <a href="javascript:void(0);" onclick="go('physicalExaminationImport.html')">&nbsp;&nbsp;体检单项导入</a>
+                  </li>
+                  <li id="tjdxlbsz">
+                      <a href="javascript:void(0);" onclick="go('physicalTypeSetting.html')">&nbsp;&nbsp;体检单项类别设置</a>
+                  </li>
+                  <li id="tjdxsz">
+                      <a href="javascript:void(0);" onclick="go('physicalExaminationSetting.html')">&nbsp;&nbsp;体检单项设置</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li>
+              <a class="sideblk blk" href="javascript:void(0);">
+                  <i class="userset"><img src="images/bookmark.png"/></i>
+                  <span class="title">基础管理</span>
+                  <span class="arrowicon"><img src="images/arrowdown.png"/></span>
+              </a>
+              <ul class="sub-menu">
+                  <li id="jglxsz">
+                      <a href="javascript:void(0);" onclick="go('hospitalTypeSetting.html')">&nbsp;&nbsp;医院类型设置</a>
+                  </li>
+                  <li id="tclxsz">
+                      <a href="javascript:void(0);" onclick="go('productTypeSetting.html')">&nbsp;&nbsp;套餐类型设置</a>
+                  </li>
+              </ul>
+          </li>
+
+          <li>
+              <a class="sideblk blk" href="javascript:void(0);">
+                  <i class="userset"><img src="images/caiwu.png"/></i>
+                  <span class="title">结算管理</span>
+                  <span class="arrowicon"><img src="images/arrowdown.png"/></span>
+              </a>
+              <ul class="sub-menu">
+                  <li >
+                      <a href="#">&nbsp;&nbsp;未结算申请</a>
+                  </li>
+                  <li >
+                      <a href="#">&nbsp;&nbsp;已结算申请</a>
+                  </li>
+              </ul>
+          </li>
+
+      </ul>
+  </div>
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/leftsideAndPage.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var urlinfo=window.location.href; //获取当前页面的url
+  var words = urlinfo.split("?")[1];
+  if(words == 'index'){
+    $("#"+words).attr("class","sideblk blk titactive");
+  }else{
+    $("#"+words).parent().attr("class","sub-menu subactive");
+    $("#"+words).attr("class","titactive");
+  }
+
+});
+
+function go(htmls){
+		top.location.href=htmls;
+}
+</script>

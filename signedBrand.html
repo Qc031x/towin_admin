@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>签约品牌</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/hospitalInformationSetup.css" rel="stylesheet" type="text/css" />
+		<style>
+			.tableleft {
+				background-color: #f7f7f7;
+			}
+
+			.doubi {
+				width: 80px;
+				height: 30px;
+				border-radius: 8px;
+				display: block;
+				float: left;
+				background: #00afc7;
+				border: 1px solid #00afc7;
+				color: #fff;
+				text-align: center;
+			}
+
+			.frs {
+				width: 80px;
+				height: 30px;
+				border-radius: 8px;
+				background: #fff;
+				border: 1px solid #999;
+				color: #666;
+				text-align: center;
+			}
+
+			.hds {
+				width: 70%;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				background: #f7f7f7;
+				font-size: 20px;
+				color: #00AFC7;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top">
+			<div class="left"><img src="images/logo.png" alt="logo" />天问管理平台<span class="wel">欢迎<span>草根</span>登录天问团检智能管理平台！</span>
+			</div>
+			<div class="right"><img alt="退出登录" src="images/loginOut.png" /><span class="username">退出登录</span></div>
+		</div>
+
+		<div class="page-container">
+			<div class="page-sidebar nav-collapse collapse"><iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="left.html?pplb" height="669" width="270"></iframe></div>
+			<div class="page-content">
+				<div class="hds">签约品牌</div>
+				<br/>
+				<div class="portlet-body">
+					<form method="post" class="definewidth m20">
+						<input type="hidden" name="id" value="{$menu.id}">
+						<table class="table table-bordered table-hover m10" style="width:70%;">
+							<tbody>
+								<tr>
+									<td width="10%" class="tableleft">品牌名称</td>
+									<td>
+										<input type="text" name="name">
+									</td>
+								</tr>
+								<tr>
+									<td class="tableleft">描述信息</td>
+									<td><input type="text" name="name"></td>
+								</tr>
+									<td class="tableleft">品牌图片</td>
+									<td>
+										<div>
+											<span class="sfz"><a href="javascript: openFile();"><img id="previewImg0" src="images/addtaocanimg.jpg"></a></span>
+										</div>
+										<input class="scwjanys preview" type="file" id="fileName" name="file" url-data="0" style="visibility: hidden;">
+									</td>
+								</tr>
+								<tr>
+									<td class="tableleft"></td>
+									<td>
+										<button type="submit" class="doubi">保存</button> &nbsp;&nbsp;<button type="button" class="frs" name="backid" id="backid">返回列表</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+
+			<div class="ykfooter">
+				<a href="#">帮助中心</a><span class="vertical">|</span>
+				<a href="#">关于我们</a><span class="vertical">|</span>
+				<a href="#">联系方式</a><span class="vertical">|</span><span class="ykcompely">天问信息技术（深圳）有限公司</span><span>&copy;&nbsp;2016&nbsp;浙&nbsp;B2-20080224-16</span></div>
+
+		</div>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/pagination.js"></script>
+		<script src="js/leftsideAndPage.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".tcdPageCode").css('display', 'block');
+
+				//右侧边栏内容高度计算
+				$('.checkdetail .content').css('height', $('.checkdetail').height() - $('.manup').height() - $('.checkdetail .hd').height() + 'px');
+
+				//右侧边栏预约主体切换
+				$('.cek').click(function() {
+					$(this).parent().parent().addClass('trActive');
+					var format = $(this).parent().siblings(".cng").html();
+					$(".blFormat").html(format);
+					$('.checkdetail').css('display', 'block');
+
+				});
+
+				//右侧边栏底部操作
+				$('.undo').click(function() {
+					$('.checkdetail').css('display', 'none');
+				});
+
+				$("#backid").click(function(){
+					top.location.href = "brandList.html";
+				});
+			});
+
+			function openFile() {
+				$("#fileName").click();
+			}
+		</script>
+
+	</body>
+
+</html>
